@@ -781,6 +781,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5714624364555632040, guid: 642a158afaa32e34bbfcfcec0574467a,
+        type: 3}
+      propertyPath: CommandLog
+      value: 
+      objectReference: {fileID: 859611386}
+    - target: {fileID: -5714624364555632040, guid: 642a158afaa32e34bbfcfcec0574467a,
+        type: 3}
+      propertyPath: UICamera
+      value: 
+      objectReference: {fileID: 1246441873}
     - target: {fileID: 7273341511645092337, guid: 642a158afaa32e34bbfcfcec0574467a,
         type: 3}
       propertyPath: m_Name

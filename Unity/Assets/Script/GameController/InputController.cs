@@ -11,6 +11,7 @@ public class InputController : MonoBehaviour
 	
 	public void OnInput(string command)
 	{
-		
+        BattleCommand inputCommand = BattleController.Instance.MakeUserCommand(command);
+        BattleController.Instance.AddCommand(inputCommand);
 	}
 }
