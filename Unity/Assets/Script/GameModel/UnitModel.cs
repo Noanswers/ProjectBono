@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitModel : MonoBehaviour
-{
+public class UnitModel : MonoBehaviour {
 
 }
 
-public class UnitBattleStat
-{
+public class UnitBattleStat {
     public int HP;
     public int SP;
     public int Atk;
@@ -17,4 +15,8 @@ public class UnitBattleStat
     public int Dex;
     public int Swap;
     public List<BattleCommand.CommandType> EnableCommands;
+}
+
+public class UnitAbState {
+
 }

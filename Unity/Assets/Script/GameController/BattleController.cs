@@ -27,6 +27,9 @@ public class BattleController : MonoSingleton<BattleController> {
         field.onEndEdit.RemoveAllListeners();
         field.onEndEdit.AddListener((value) => {
             commandQueue.Enqueue(new BattleCommand(value, playerUnit));
+            Debug.Log(value);
+
+            field.text = string.Empty;
         });
     }
 
@@ -48,6 +51,7 @@ public class BattleController : MonoSingleton<BattleController> {
             PrintCommand(doCommand, result);
         }
     }
+
 
     void ProcessWaitCommand() {
         float waitTime = Time.deltaTime;
@@ -73,7 +77,7 @@ public class BattleController : MonoSingleton<BattleController> {
 
     CommandResult DoCommand(BattleCommand command) {
         CommandResult result = new CommandResult();
-
+        
         switch (command.Type) {
             case BattleCommand.CommandType.NONE:
                 break;
@@ -106,7 +110,25 @@ public class BattleController : MonoSingleton<BattleController> {
     }
 
 
-    void Attack(BattleCommand command) {
+    CommandResult Attack(BattleCommand command) {
+        string targetUnitString = command.TargetValue1;
+        Unit unit = GetUnit(targetUnitString);
 
+        CommandResult result = new CommandResult();
+        result.SetAttackResult(command, unit);
+        return result;
+    }
+
+    Unit GetUnit(string name) {
+        Unit unit = null;
+        for (int i = 0; i < enemyUnits.Count; i++) {
+            if (enemyUnits[i].UnitName == name)
+                unit = enemyUnits[i];
+        }
+
+        if (playerUnit.UnitName == name)
+            unit = playerUnit;
+
+        return unit;
     }
 }

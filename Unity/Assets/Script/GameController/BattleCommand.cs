@@ -22,10 +22,25 @@ public class BattleCommand {
         }
     }
     string originalFullSentence = string.Empty;
-    int useUnitGameID = 0;
+    Unit useUnit = null;
+    public Unit UseUnit {
+        get {
+            return useUnit;
+        }
+    }
     bool swapping = false; // 회피 등으로 무효화된 커맨드인지 여부
+    public bool Swapping {
+        get {
+            return swapping;
+        }
+    }
     bool textError = false;
     string targetValue1;
+    public string TargetValue1 {
+        get {
+            return targetValue1;
+        }
+    }
     string targetValue2;
 
     //AICommand (클래스를 따로 두는게 맞겠지만 아직 어떻게 될지 모르므로 임시로 같이 처리)
@@ -35,9 +50,7 @@ public class BattleCommand {
             return waitLeftTime;
         }
     }
-
     public float WaitTotalTime { get; set; } = 0;
-
     public BattleCommand() {
     }
 
@@ -66,15 +79,15 @@ public class BattleCommand {
         CommandType command = CommandType.NONE;
 
         if (!string.IsNullOrWhiteSpace(str) && !string.IsNullOrEmpty(str)) {
-            if (str == "attack")
+            if (str.Equals("attack", System.StringComparison.OrdinalIgnoreCase))
                 command = CommandType.ATTACK;
-            else if (str == "defence")
+            else if (str.Equals("defence", System.StringComparison.OrdinalIgnoreCase))
                 command = CommandType.DEFENCE;
-            else if (str == "swap")
+            else if (str.Equals("swap", System.StringComparison.OrdinalIgnoreCase))
                 command = CommandType.SWAP;
-            else if (str == "swing")
+            else if (str.Equals("swing", System.StringComparison.OrdinalIgnoreCase))
                 command = CommandType.SWING;
-            else if (str == "fireball")
+            else if (str.Equals("fireball", System.StringComparison.OrdinalIgnoreCase))
                 command = CommandType.FIREBALL;
         }
         return command;
@@ -83,5 +96,15 @@ public class BattleCommand {
 
 
 public class CommandResult {
+    string resultString;
+    public bool success;
 
+    public void SetAttackResult(BattleCommand command, Unit targetUnit) {
+        if (command.Swapping) {
+            resultString = "공격이 빗나갔다";
+            success = false;
+        } else {
+            int damage = targetUnit.Damage(command.UseUnit.GetAttackValue());
+        }
+    }
 }
