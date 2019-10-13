@@ -72,8 +72,6 @@ public class BattleController : MonoSingleton<BattleController>
 
         switch (command.Type)
         {
-            case BattleCommand.CommandType.none:
-                break;
             case BattleCommand.CommandType.attack:
                 break;
             case BattleCommand.CommandType.defence:
@@ -83,8 +81,6 @@ public class BattleController : MonoSingleton<BattleController>
             case BattleCommand.CommandType.swing:
                 break;
             case BattleCommand.CommandType.fireball:
-                break;
-            case BattleCommand.CommandType.total:
                 break;
             default:
                 break;
@@ -105,8 +101,30 @@ public class BattleController : MonoSingleton<BattleController>
     }
 
 
-    void Attack(BattleCommand command)
+    CommandResult Attack(BattleCommand command)
     {
+        string targetUnitString = command.TargetValue1;
+        Unit unit = GetUnit(targetUnitString);
 
+        CommandResult result = new CommandResult();
+        result.SetAttackResult(command, unit);
+        return result;
+    }
+
+
+
+    Unit GetUnit(string name)
+    {
+        Unit unit = null;
+        for(int i=0; i<EnemyUnits.Count; i++)
+        {
+            if (EnemyUnits[i].UnitName == name)
+                unit = EnemyUnits[i];
+        }
+
+        if (PlayerUnit.UnitName == name)
+            unit = PlayerUnit;
+
+        return unit;
     }
 }

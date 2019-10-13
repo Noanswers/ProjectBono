@@ -18,3 +18,8 @@ public class UnitBattleStat
     public int Swap;
     public List<BattleCommand.CommandType> EnableCommands;
 }
+
+public class UnitAbState
+{
+
+}
