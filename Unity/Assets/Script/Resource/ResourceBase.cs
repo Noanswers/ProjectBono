@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ResourceBase {
 
-    public readonly int id;
-    public readonly string name;
+    public int id;
+    public string name;
 
-    //public Sprite sprite;
+    public ResourceBase() {
 
-    public ResourceBase(Dictionary<string, object> jsonRaw) {
+    }
+
+    public virtual void SetData(Dictionary<string, object> jsonRaw) {
+        ResourceBase _data = new ResourceBase();
+
         //
         if (jsonRaw.ContainsKey("id")) {
             id = int.Parse(jsonRaw["id"].ToString());

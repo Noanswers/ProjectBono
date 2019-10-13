@@ -13,7 +13,6 @@ public class BattleController : MonoSingleton<BattleController> {
     public PlayerUnit playerUnit;
     public List<Unit> enemyUnits;
 
-    private Queue<BattleCommand> commandQueue = new Queue<BattleCommand>(); //전체 실행 커맨드 순서
     private List<BattleCommand> waitCommand = new List<BattleCommand>(); //AI가 다음에 실행할 커맨드들
 
     //
@@ -26,7 +25,7 @@ public class BattleController : MonoSingleton<BattleController> {
         //
         field.onEndEdit.RemoveAllListeners();
         field.onEndEdit.AddListener((value) => {
-            commandQueue.Enqueue(new BattleCommand(value, playerUnit));
+            playerUnit.AppendCommand(new BattleCommand(value, playerUnit));
             Debug.Log(value);
 
             field.text = string.Empty;
@@ -37,71 +36,60 @@ public class BattleController : MonoSingleton<BattleController> {
         Initialize();
     }
 
-    private void Update() {
-        if (!isBattle)
-            return;
+    //private void Update() {
+    //    if (!isBattle)
+    //        return;
 
-        if (waitCommand.Count > 0) {
-            ProcessWaitCommand();
-        }
+    //    if (waitCommand.Count > 0) {
+    //        ProcessWaitCommand();
+    //    }
 
-        if (commandQueue.Count > 0) {
-            BattleCommand doCommand = commandQueue.Dequeue();
-            CommandResult result = DoCommand(doCommand);
-            PrintCommand(doCommand, result);
-        }
-    }
+    //    if (commandQueue.Count > 0) {
+    //        CommandResult result = DoCommand(doCommand);
+    //        PrintCommand(doCommand, result);
+    //    }
+    //}
 
+    //void ProcessWaitCommand() {
+    //    float waitTime = Time.deltaTime;
+    //    for (int i = 0; i < waitCommand.Count; i++) {
+    //        waitCommand[i].WaitTotalTime += waitTime;
+    //        if (waitCommand[i].WaitTotalTime >= waitCommand[i].WaitLeftTIme) {
+    //            commandQueue.Enqueue(waitCommand[i]);
+    //            waitCommand.RemoveAt(i);
+    //            i--;
+    //        }
+    //    }
+    //}
 
-    void ProcessWaitCommand() {
-        float waitTime = Time.deltaTime;
-        for (int i = 0; i < waitCommand.Count; i++) {
-            waitCommand[i].WaitTotalTime += waitTime;
-            if (waitCommand[i].WaitTotalTime >= waitCommand[i].WaitLeftTIme) {
-                AddCommand(waitCommand[i]);
-                waitCommand.RemoveAt(i);
-                i--;
-            }
-        }
-    }
-
-    //일반적으로 유저의 입력 & 발동되는 AI의 입력
-    public void AddCommand(BattleCommand command) {
-        commandQueue.Enqueue(command);
-    }
-
-    //일반적으로 AI의 입력
-    public void AddWaitCommand(BattleCommand command) {
-        waitCommand.Add(command);
-    }
-
-    CommandResult DoCommand(BattleCommand command) {
-        CommandResult result = new CommandResult();
+    //CommandResult DoCommand(BattleCommand command) {
+    //    CommandResult result = new CommandResult();
         
-        switch (command.Type) {
-            case BattleCommand.CommandType.NONE:
-                break;
-            case BattleCommand.CommandType.ATTACK:
-                break;
-            case BattleCommand.CommandType.DEFENCE:
-                break;
-            case BattleCommand.CommandType.SWAP:
-                break;
-            case BattleCommand.CommandType.SWING:
-                break;
-            case BattleCommand.CommandType.FIREBALL:
-                break;
-            case BattleCommand.CommandType.TOTAL:
-                break;
-            default:
-                break;
-        }
-        return result;
-    }
+    //    switch (command.Type) {
+    //        case BattleCommand.CommandType.NONE:
+    //            break;
+    //        case BattleCommand.CommandType.ATTACK:
+    //            break;
+    //        case BattleCommand.CommandType.DEFENCE:
+    //            break;
+    //        case BattleCommand.CommandType.SWAP:
+    //            break;
+    //        case BattleCommand.CommandType.SWING:
+    //            break;
+    //        case BattleCommand.CommandType.FIREBALL:
+    //            break;
+    //        case BattleCommand.CommandType.TOTAL:
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //    return result;
+    //}
 
-    void PrintCommand(BattleCommand command, CommandResult result) {
+    // 커맨드 리
+    //void PrintCommand(BattleCommand command, CommandResult result) {
 
-    }
+    //}
 
     public BattleCommand MakeUserCommand(string commandString) {
         BattleCommand command = new BattleCommand(commandString, playerUnit);
@@ -110,25 +98,25 @@ public class BattleController : MonoSingleton<BattleController> {
     }
 
 
-    CommandResult Attack(BattleCommand command) {
-        string targetUnitString = command.TargetValue1;
-        Unit unit = GetUnit(targetUnitString);
+    //CommandResult Attack(BattleCommand command) {
+    //    string targetUnitString = command.TargetValue1;
+    //    Unit unit = GetUnit(targetUnitString);
 
-        CommandResult result = new CommandResult();
-        result.SetAttackResult(command, unit);
-        return result;
-    }
+    //    CommandResult result = new CommandResult();
+    //    result.SetAttackResult(command, unit);
+    //    return result;
+    //}
 
-    Unit GetUnit(string name) {
-        Unit unit = null;
-        for (int i = 0; i < enemyUnits.Count; i++) {
-            if (enemyUnits[i].UnitName == name)
-                unit = enemyUnits[i];
-        }
+    //Unit GetPlayerUnit(string name) {
+    //    Unit unit = null;
+    //    for (int i = 0; i < enemyUnits.Count; i++) {
+    //        if (enemyUnits[i].UnitName == name)
+    //            unit = enemyUnits[i];
+    //    }
 
-        if (playerUnit.UnitName == name)
-            unit = playerUnit;
+    //    if (playerUnit.UnitName == name)
+    //        unit = playerUnit;
 
-        return unit;
-    }
+    //    return unit;
+    //}
 }

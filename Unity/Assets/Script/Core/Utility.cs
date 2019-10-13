@@ -343,14 +343,6 @@ public class Utility : MonoBehaviour {
         return true;
     }
 
-
-    // AssetBundle Manager
-    private static System.Collections.IEnumerator PerformLoadResource(WWW www, Type type) {
-        yield return www;
-    }
-
-    private static UTF8Encoding utf8Encoding = new UTF8Encoding(true);
-
     // https://3dmpengines.tistory.com/1745
     public static List<string> GetFileNamesAtPath(string path) {
 

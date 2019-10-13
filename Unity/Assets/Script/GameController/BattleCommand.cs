@@ -15,64 +15,42 @@ public class BattleCommand {
         TOTAL,
     }
 
-    CommandType type = CommandType.NONE;
-    public CommandType Type {
-        get {
-            return type;
-        }
-    }
-    string originalFullSentence = string.Empty;
-    Unit useUnit = null;
-    public Unit UseUnit {
-        get {
-            return useUnit;
-        }
-    }
-    bool swapping = false; // 회피 등으로 무효화된 커맨드인지 여부
-    public bool Swapping {
-        get {
-            return swapping;
-        }
-    }
-    bool textError = false;
-    string targetValue1;
-    public string TargetValue1 {
-        get {
-            return targetValue1;
-        }
-    }
-    string targetValue2;
+    public readonly CommandType type;
+    public readonly string originalFullSentence;
+    public readonly Unit useUnit;
 
-    //AICommand (클래스를 따로 두는게 맞겠지만 아직 어떻게 될지 모르므로 임시로 같이 처리)
-    float waitLeftTime; // Command 실행까지 남은 시간
-    public float WaitLeftTIme {
-        get {
-            return waitLeftTime;
-        }
-    }
-    public float WaitTotalTime { get; set; } = 0;
-    public BattleCommand() {
-    }
+    //bool textError = false;
+    //string targetValue1;
+    //public string TargetValue1 {
+    //    get {
+    //        return targetValue1;
+    //    }
+    //}
+    //string targetValue2;
+
+    ////AICommand (클래스를 따로 두는게 맞겠지만 아직 어떻게 될지 모르므로 임시로 같이 처리)
+    //float waitLeftTime; // Command 실행까지 남은 시간
+    //public float WaitLeftTIme {
+    //    get {
+    //        return waitLeftTime;
+    //    }
+    //}
+    //public float WaitTotalTime { get; set; } = 0;
+    //public BattleCommand() {
+    //}
 
     public BattleCommand(string commandString, Unit useUnit) {
-        textError = true;
-        if (string.IsNullOrWhiteSpace(commandString) || string.IsNullOrEmpty(commandString))
+        if (string.IsNullOrEmpty(commandString.Trim()))
             return;
 
-        originalFullSentence = commandString;
-
+        //
+        this.originalFullSentence = commandString;
         string[] commands = commandString.Split(' ');
-        if (commands != null && commands.Length > 0) {
-            type = GetCommandType(commands[0], useUnit);
 
-            if (commands.Length > 1)
-                targetValue1 = commands[1];
-            if (commands.Length > 2)
-                targetValue2 = commands[2];
-        }
-
-        if (type != CommandType.NONE)
-            textError = false;
+        //
+        // 명령어 해석기 하나 만들어서 string list 보내서 판단하도록 해야함
+        // command는 명령어 자체에 대한 정보만 포함하는 것이 깔끔
+        // 명령어가 발사된 시간, 명령어, 명령 주체 정도만 갖는 것이 깔끔해보임
     }
 
     CommandType GetCommandType(string str, Unit useUnit) {
@@ -91,20 +69,5 @@ public class BattleCommand {
                 command = CommandType.FIREBALL;
         }
         return command;
-    }
-}
-
-
-public class CommandResult {
-    string resultString;
-    public bool success;
-
-    public void SetAttackResult(BattleCommand command, Unit targetUnit) {
-        if (command.Swapping) {
-            resultString = "공격이 빗나갔다";
-            success = false;
-        } else {
-            int damage = targetUnit.Damage(command.UseUnit.GetAttackValue());
-        }
     }
 }

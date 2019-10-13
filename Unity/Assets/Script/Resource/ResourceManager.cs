@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
+using System;
+using System.Runtime.Serialization;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -15,12 +17,15 @@ public class ResourceManager {
     const string DIR_PATCHES = "Assets/" + PATCH_FOLDER_NAME + "/";
 
     //
-    //private Dictionary<long, ResourceStage> stages = new Dictionary<long, ResourceStage>();
+    private Dictionary<long, ResourceUnit> units = new Dictionary<long, ResourceUnit>();
 
-    ////
-    //public ICollection<ResourceStage> GetStages() {
-    //    return stages.Values;
-    //}
+    //
+    public ResourceUnit GetUnitByID(long unitID) {
+        if (!units.ContainsKey(unitID))
+            return null;
+
+        return units[unitID];
+    }
 
     public static ResourceManager Get() {
         if (singleton == null)
@@ -35,33 +40,34 @@ public class ResourceManager {
 
         //
         ReloadAll();
-        //InitStages();
 
         //
         singleton.inited = true;
     }
 
     private void ReloadAll() {
+        ReloadFolder<ResourceUnit>("Unit", units);
+    }
+
+    private void ReloadFolder<T>(string folderName, Dictionary<long, T> container) where T : ResourceBase, new() {
+        container.Clear();
+
         //
-        string _folderName = "Json";
+        foreach (string textAssetName in Utility.GetFileNamesAtPath("Patches/" + folderName)) {
+            var ta = Utility.LoadPatches<TextAsset>(folderName + "/" + textAssetName);
+            var parsed = Utility.ParseJSONfromTextAsset(ta);
 
-        //// TODO: 컨테이너 정리 필요
-        //stages.Clear();
+            //
+            foreach (var jRes in parsed) {
+                //
+                var _res = new T();
+                _res.SetData(jRes);
+                container.Add(_res.id, _res);
+            }
 
-        ////
-        //foreach (string textAssetName in Utility.GetFileNamesAtPath("Patches/" + _folderName)) {
-        //    var ta = Utility.LoadPatches<TextAsset>(_folderName + "/" + textAssetName);
-        //    var parsed = Utility.ParseJSONfromTextAsset(ta);
-
-        //    foreach (var jStage in parsed) {
-        //        //
-        //        var resStage = new ResourceStage(jStage);
-        //        stages.Add(resStage.id, resStage);
-        //    }
-
-        //    //
-        //    Resources.UnloadAsset(ta);
-        //    Debug.Log(textAssetName + " : " + parsed.Count);
-        //}
+            //
+            Resources.UnloadAsset(ta);
+            Debug.Log(textAssetName + " : " + parsed.Count);
+        }
     }
 }
