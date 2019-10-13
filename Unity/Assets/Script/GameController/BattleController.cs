@@ -69,6 +69,26 @@ public class BattleController : MonoSingleton<BattleController>
     CommandResult DoCommand(BattleCommand command)
     {
         CommandResult result = new CommandResult();
+
+        switch (command.Type)
+        {
+            case BattleCommand.CommandType.none:
+                break;
+            case BattleCommand.CommandType.attack:
+                break;
+            case BattleCommand.CommandType.defence:
+                break;
+            case BattleCommand.CommandType.swap:
+                break;
+            case BattleCommand.CommandType.swing:
+                break;
+            case BattleCommand.CommandType.fireball:
+                break;
+            case BattleCommand.CommandType.total:
+                break;
+            default:
+                break;
+        }
         return result;
     }
 
@@ -79,7 +99,14 @@ public class BattleController : MonoSingleton<BattleController>
     
     public BattleCommand MakeUserCommand(string commandString)
     {
-        BattleCommand command = new BattleCommand(commandString);
+        BattleCommand command = new BattleCommand(commandString, PlayerUnit);
+
         return command;
+    }
+
+
+    void Attack(BattleCommand command)
+    {
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-	public void OnChang(string command)
+	public void OnChange(string command)
 	{
 		
 	}
