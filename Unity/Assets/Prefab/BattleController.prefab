@@ -58,5 +58,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CommandLog: {fileID: 0}
   UICamera: {fileID: 0}
-  PlayerUnit: {fileID: 0}
-  EnemyUnits: []
+  field: {fileID: 0}
+  playerUnit: {fileID: 0}
+  enemyUnits: []
