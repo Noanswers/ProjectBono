@@ -11,7 +11,7 @@ public class BattleController : MonoSingleton<BattleController> {
     public InputField field;
 
     public PlayerUnit playerUnit;
-    public List<Unit> enemyUnits;
+    public List<BaseUnit> enemyUnits;
 
     private List<BattleCommand> waitCommand = new List<BattleCommand>(); //AI가 다음에 실행할 커맨드들
 
@@ -20,7 +20,7 @@ public class BattleController : MonoSingleton<BattleController> {
 
     public void Initialize() {
         playerUnit = new PlayerUnit();
-        enemyUnits = new List<Unit>();
+        enemyUnits = new List<BaseUnit>();
 
         //
         field.onEndEdit.RemoveAllListeners();

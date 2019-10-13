@@ -17,7 +17,7 @@ public class BattleCommand {
 
     public readonly CommandType type;
     public readonly string originalFullSentence;
-    public readonly Unit useUnit;
+    public readonly BaseUnit useUnit;
 
     //bool textError = false;
     //string targetValue1;
@@ -39,7 +39,7 @@ public class BattleCommand {
     //public BattleCommand() {
     //}
 
-    public BattleCommand(string commandString, Unit useUnit) {
+    public BattleCommand(string commandString, BaseUnit useUnit) {
         if (string.IsNullOrEmpty(commandString.Trim()))
             return;
 
@@ -53,7 +53,7 @@ public class BattleCommand {
         // 명령어가 발사된 시간, 명령어, 명령 주체 정도만 갖는 것이 깔끔해보임
     }
 
-    CommandType GetCommandType(string str, Unit useUnit) {
+    CommandType GetCommandType(string str, BaseUnit useUnit) {
         CommandType command = CommandType.NONE;
 
         if (!string.IsNullOrWhiteSpace(str) && !string.IsNullOrEmpty(str)) {
