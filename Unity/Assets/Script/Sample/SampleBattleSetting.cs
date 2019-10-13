@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SampleBattleSetting : MonoBehaviour
-{
-    void Start()
-    {
-        
+public class SampleBattleSetting : MonoBehaviour {
+    void Start() {
+
     }
 
 }

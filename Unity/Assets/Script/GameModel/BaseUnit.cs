@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BaseUnit : MonoBehaviour {
-    
+
     private List<Constants.UnitState> states;    // 유닛 상태이상 목록
     private List<BattleCommand> _commandLogs;   // 전체 실행 커맨드
     private Dictionary<Constants.UnitStat, float> _unitStat;    // 유닛 스텟

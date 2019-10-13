@@ -64,7 +64,7 @@ public class BattleController : MonoSingleton<BattleController> {
 
     //CommandResult DoCommand(BattleCommand command) {
     //    CommandResult result = new CommandResult();
-        
+
     //    switch (command.Type) {
     //        case BattleCommand.CommandType.NONE:
     //            break;

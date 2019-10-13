@@ -19,24 +19,24 @@ public class ResourceUnit : ResourceBase {
 
     public override void SetData(Dictionary<string, object> jsonRaw) {
         base.SetData(jsonRaw);
-    
+
         //
         if (jsonRaw.ContainsKey("hp")) {
             int.TryParse(jsonRaw["hp"].ToString(), out hp);
-        }                                           
-        if (jsonRaw.ContainsKey("sp")) {            
+        }
+        if (jsonRaw.ContainsKey("sp")) {
             int.TryParse(jsonRaw["sp"].ToString(), out sp);
-        }                                           
-        if (jsonRaw.ContainsKey("dex")) {            
+        }
+        if (jsonRaw.ContainsKey("dex")) {
             int.TryParse(jsonRaw["dex"].ToString(), out dex);
-        }                                           
-        if (jsonRaw.ContainsKey("def")) {            
+        }
+        if (jsonRaw.ContainsKey("def")) {
             int.TryParse(jsonRaw["def"].ToString(), out def);
-        }                                           
-        if (jsonRaw.ContainsKey("attack_physical")) {            
+        }
+        if (jsonRaw.ContainsKey("attack_physical")) {
             int.TryParse(jsonRaw["attack_physical"].ToString(), out attack_physical);
-        }                                           
-        if (jsonRaw.ContainsKey("attack_magical")) {            
+        }
+        if (jsonRaw.ContainsKey("attack_magical")) {
             int.TryParse(jsonRaw["attack_magical"].ToString(), out attack_magical);
         }
 
