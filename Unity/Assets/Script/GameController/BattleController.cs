@@ -13,11 +13,6 @@ public class BattleController : MonoSingleton<BattleController> {
     public PlayerUnit playerUnit;
     public List<BaseUnit> enemyUnits;
 
-    private List<BattleCommand> waitCommand = new List<BattleCommand>(); //AI가 다음에 실행할 커맨드들
-
-    //
-    bool isBattle = false;
-
     public void Initialize() {
         playerUnit = new PlayerUnit();
         enemyUnits = new List<BaseUnit>();
