@@ -25,6 +25,9 @@ public class BattleController : MonoSingleton<BattleController> {
         //_player.Initialize(null);
         _units.Clear();
 
+        // 입력칸 초기화
+        inputField.text = string.Empty;
+
         // 커맨드 효과 처리
         inputField.onValueChanged.RemoveAllListeners();
         inputField.onValueChanged.AddListener((value) => {
