@@ -41,10 +41,19 @@ public class BattleController : MonoSingleton<BattleController> {
             //Debug.Log(value);
 
             inputField.text = string.Empty;
+
+            if (!inputField.isFocused)
+                inputField.Select();
         });
     }
 
     public void Awake() {
+        typeParticle.Stop();
+
         Initialize();
+
+        //
+        if (!inputField.isFocused)
+            inputField.Select();
     }
 }
