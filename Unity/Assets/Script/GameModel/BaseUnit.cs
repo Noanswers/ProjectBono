@@ -17,10 +17,10 @@ public abstract class BaseUnit : MonoBehaviour {
         _unitStat = new Dictionary<Constants.UnitStat, float>();
 
         // 커스텀 메모리 초기화
-        _customMemory = new char[resUnit.memSize];
-        for (int i = 0; i < _customMemory.Length; ++i) {
-            _customMemory[i] = (char) 0;
-        }
+        //_customMemory = new char[resUnit.memSize];
+        //for (int i = 0; i < _customMemory.Length; ++i) {
+        //    _customMemory[i] = (char) 0;
+        //}
 
         // 명령어 로그 삭제
         _commandLogs.Clear();

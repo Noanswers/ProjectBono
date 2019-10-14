@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 
 public class BattleController : MonoSingleton<BattleController> {
-    [Header("Scene")]
-    public Camera UICamera;
+    //[Header("Scene")]
+    //public Camera UICamera;
 
     [Header("UI - logs")]
     public VerticalLayoutGroup vBoxLogs;
@@ -14,21 +14,31 @@ public class BattleController : MonoSingleton<BattleController> {
 
     [Header("UI - input")]
     public InputField inputField;
+    public ParticleSystem typeParticle;
 
     // private
-    private PlayerUnit _player = new PlayerUnit();
+    private PlayerUnit _player;
     private List<BaseUnit> _units = new List<BaseUnit>();
 
     public void Initialize() {
         // 데이터 입력 필요
-        _player.Initialize(null);
+        //_player.Initialize(null);
         _units.Clear();
+
+        // 커맨드 효과 처리
+        inputField.onValueChanged.RemoveAllListeners();
+        inputField.onValueChanged.AddListener((value) => {
+            if (!typeParticle.gameObject.activeSelf)
+                typeParticle.gameObject.SetActive(true);
+
+            typeParticle.Play();
+        });
 
         // 커맨드 입력 처리
         inputField.onEndEdit.RemoveAllListeners();
         inputField.onEndEdit.AddListener((value) => {
-            _player.AppendCommand(new BattleCommand(value, _player));
-            Debug.Log(value);
+            //_player.AppendCommand(new BattleCommand(value, _player));
+            //Debug.Log(value);
 
             inputField.text = string.Empty;
         });
