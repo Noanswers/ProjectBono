@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vBoxLogs: {fileID: 0}
-  prefabCommand: {fileID: 0}
+  prefabCommand: {fileID: 916445370140268687, guid: 15165b9e8d8ae8247ae8f8018422bfda,
+    type: 3}
   inputField: {fileID: 0}
   txtInputed: {fileID: 0}
   typeParticle: {fileID: 0}

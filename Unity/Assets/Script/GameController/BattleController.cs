@@ -26,6 +26,16 @@ public class BattleController : MonoSingleton<BattleController> {
         //_player.Initialize(null);
         _units.Clear();
 
+        // 로그 초기화
+        for (int i = 0; i < vBoxLogs.transform.childCount; ++i) {
+            var go = vBoxLogs.transform.GetChild(i);
+            if (go == null)
+                continue;
+
+            // TODO: 후에 풀링 시스템 추가 및 적용 필요
+            Object.Destroy(go);
+        }
+        
         // 입력칸 초기화
         inputField.text = string.Empty;
         txtInputed.text = inputField.text;
@@ -45,8 +55,7 @@ public class BattleController : MonoSingleton<BattleController> {
         // 커맨드 입력 처리
         inputField.onEndEdit.RemoveAllListeners();
         inputField.onEndEdit.AddListener((value) => {
-            //_player.AppendCommand(new BattleCommand(value, _player));
-            //Debug.Log(value);
+            AppendCommand(value);
 
             inputField.text = string.Empty;
             txtInputed.text = inputField.text;
@@ -64,5 +73,20 @@ public class BattleController : MonoSingleton<BattleController> {
         //
         if (!inputField.isFocused)
             inputField.Select();
+    }
+
+    private void AppendCommand(string value) {
+        // 커맨드 입력자에게 커맨드 추가 필요
+        //_player.AppendCommand(new BattleCommand(value, _player));
+        Debug.Log(value);
+
+        var goCommand = Object.Instantiate(prefabCommand);
+        if (goCommand == null)
+            return;
+
+        var command = goCommand.GetComponent<UICommand>();
+        command.textCommand.text = value;
+
+        goCommand.transform.SetParent(vBoxLogs.transform, false);
     }
 }
