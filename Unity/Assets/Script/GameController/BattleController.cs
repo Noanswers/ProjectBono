@@ -8,11 +8,14 @@ public class BattleController : MonoSingleton<BattleController> {
     [Header("Scene")]
     public Camera UICamera;
 
-    [Header("UI")]
-    public Text CommandLog;
-    public InputField field;
+    [Header("UI - logs")]
+    public VerticalLayoutGroup vBoxLogs;
+    public GameObject prefabCommand;
 
-    //
+    [Header("UI - input")]
+    public InputField inputField;
+
+    // private
     private PlayerUnit _player = new PlayerUnit();
     private List<BaseUnit> _units = new List<BaseUnit>();
 
@@ -22,12 +25,12 @@ public class BattleController : MonoSingleton<BattleController> {
         _units.Clear();
 
         // 커맨드 입력 처리
-        field.onEndEdit.RemoveAllListeners();
-        field.onEndEdit.AddListener((value) => {
+        inputField.onEndEdit.RemoveAllListeners();
+        inputField.onEndEdit.AddListener((value) => {
             _player.AppendCommand(new BattleCommand(value, _player));
             Debug.Log(value);
 
-            field.text = string.Empty;
+            inputField.text = string.Empty;
         });
     }
 
