@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -85,7 +86,8 @@ public class BattleController : MonoSingleton<BattleController> {
             return;
 
         var command = goCommand.GetComponent<UICommand>();
-        command.textCommand.text = value;
+        command.textCommand.text = string.Empty;
+        command.textCommand.DOText(value, 1.0f);
 
         goCommand.transform.SetParent(vBoxLogs.transform, false);
     }
