@@ -1,134 +1,94 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class BattleController : MonoSingleton<BattleController> {
-    public Text CommandLog;
-    public Camera UICamera;
+    //[Header("Scene")]
+    //public Camera UICamera;
 
-    public InputField field;
+    [Header("UI - logs")]
+    public VerticalLayoutGroup vBoxLogs;
+    public GameObject prefabCommand;
 
-    public PlayerUnit playerUnit;
-    public List<Unit> enemyUnits;
+    [Header("UI - input")]
+    public InputField inputField;
+    public Text txtInputed;
+    public ParticleSystem typeParticle;
 
-    private Queue<BattleCommand> commandQueue = new Queue<BattleCommand>(); //전체 실행 커맨드 순서
-    private List<BattleCommand> waitCommand = new List<BattleCommand>(); //AI가 다음에 실행할 커맨드들
-
-    //
-    bool isBattle = false;
+    // private
+    private PlayerUnit _player;
+    private List<BaseUnit> _units = new List<BaseUnit>();
 
     public void Initialize() {
-        playerUnit = new PlayerUnit();
-        enemyUnits = new List<Unit>();
+        // 데이터 입력 필요
+        //_player.Initialize(null);
+        _units.Clear();
 
-        //
-        field.onEndEdit.RemoveAllListeners();
-        field.onEndEdit.AddListener((value) => {
-            commandQueue.Enqueue(new BattleCommand(value, playerUnit));
-            Debug.Log(value);
+        // 로그 초기화
+        for (int i = 0; i < vBoxLogs.transform.childCount; ++i) {
+            var go = vBoxLogs.transform.GetChild(i);
+            if (go == null)
+                continue;
 
-            field.text = string.Empty;
+            // TODO: 후에 풀링 시스템 추가 및 적용 필요
+            Object.Destroy(go);
+        }
+        
+        // 입력칸 초기화
+        inputField.text = string.Empty;
+        txtInputed.text = inputField.text;
+
+        // 커맨드 효과 처리
+        inputField.onValueChanged.RemoveAllListeners();
+        inputField.onValueChanged.AddListener((value) => {
+            // UI 버그 우회
+            txtInputed.text = inputField.text;
+
+            if (!typeParticle.gameObject.activeSelf)
+                typeParticle.gameObject.SetActive(true);
+
+            typeParticle.Play();
+        });
+
+        // 커맨드 입력 처리
+        inputField.onEndEdit.RemoveAllListeners();
+        inputField.onEndEdit.AddListener((value) => {
+            AppendCommand(value);
+
+            inputField.text = string.Empty;
+            txtInputed.text = inputField.text;
+
+            if (!inputField.isFocused)
+                inputField.Select();
         });
     }
 
     public void Awake() {
+        typeParticle.Stop();
+
         Initialize();
+
+        //
+        if (!inputField.isFocused)
+            inputField.Select();
     }
 
-    private void Update() {
-        if (!isBattle)
+    private void AppendCommand(string value) {
+        // 커맨드 입력자에게 커맨드 추가 필요
+        //_player.AppendCommand(new BattleCommand(value, _player));
+        Debug.Log(value);
+
+        var goCommand = Object.Instantiate(prefabCommand);
+        if (goCommand == null)
             return;
 
-        if (waitCommand.Count > 0) {
-            ProcessWaitCommand();
-        }
+        var command = goCommand.GetComponent<UICommand>();
+        command.textCommand.text = string.Empty;
+        command.textCommand.DOText(value, 1.0f);
 
-        if (commandQueue.Count > 0) {
-            BattleCommand doCommand = commandQueue.Dequeue();
-            CommandResult result = DoCommand(doCommand);
-            PrintCommand(doCommand, result);
-        }
-    }
-
-
-    void ProcessWaitCommand() {
-        float waitTime = Time.deltaTime;
-        for (int i = 0; i < waitCommand.Count; i++) {
-            waitCommand[i].WaitTotalTime += waitTime;
-            if (waitCommand[i].WaitTotalTime >= waitCommand[i].WaitLeftTIme) {
-                AddCommand(waitCommand[i]);
-                waitCommand.RemoveAt(i);
-                i--;
-            }
-        }
-    }
-
-    //일반적으로 유저의 입력 & 발동되는 AI의 입력
-    public void AddCommand(BattleCommand command) {
-        commandQueue.Enqueue(command);
-    }
-
-    //일반적으로 AI의 입력
-    public void AddWaitCommand(BattleCommand command) {
-        waitCommand.Add(command);
-    }
-
-    CommandResult DoCommand(BattleCommand command) {
-        CommandResult result = new CommandResult();
-        
-        switch (command.Type) {
-            case BattleCommand.CommandType.NONE:
-                break;
-            case BattleCommand.CommandType.ATTACK:
-                break;
-            case BattleCommand.CommandType.DEFENCE:
-                break;
-            case BattleCommand.CommandType.SWAP:
-                break;
-            case BattleCommand.CommandType.SWING:
-                break;
-            case BattleCommand.CommandType.FIREBALL:
-                break;
-            case BattleCommand.CommandType.TOTAL:
-                break;
-            default:
-                break;
-        }
-        return result;
-    }
-
-    void PrintCommand(BattleCommand command, CommandResult result) {
-
-    }
-
-    public BattleCommand MakeUserCommand(string commandString) {
-        BattleCommand command = new BattleCommand(commandString, playerUnit);
-
-        return command;
-    }
-
-
-    CommandResult Attack(BattleCommand command) {
-        string targetUnitString = command.TargetValue1;
-        Unit unit = GetUnit(targetUnitString);
-
-        CommandResult result = new CommandResult();
-        result.SetAttackResult(command, unit);
-        return result;
-    }
-
-    Unit GetUnit(string name) {
-        Unit unit = null;
-        for (int i = 0; i < enemyUnits.Count; i++) {
-            if (enemyUnits[i].UnitName == name)
-                unit = enemyUnits[i];
-        }
-
-        if (playerUnit.UnitName == name)
-            unit = playerUnit;
-
-        return unit;
+        goCommand.transform.SetParent(vBoxLogs.transform, false);
     }
 }
