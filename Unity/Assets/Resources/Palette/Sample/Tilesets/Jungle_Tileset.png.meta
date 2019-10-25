@@ -1,0 +1,1087 @@
+fileFormatVersion: 2
+guid: 3b30003999f7c419b878b6e3e3948812
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Jungle_Tileset_Spritesheet_0
+  - first:
+      213: 21300002
+    second: Jungle_Tileset_Spritesheet_1
+  - first:
+      213: 21300004
+    second: Jungle_Tileset_Spritesheet_2
+  - first:
+      213: 21300006
+    second: Jungle_Tileset_Spritesheet_3
+  - first:
+      213: 21300008
+    second: Jungle_Tileset_Spritesheet_4
+  - first:
+      213: 21300010
+    second: Jungle_Tileset_Spritesheet_5
+  - first:
+      213: 21300012
+    second: Jungle_Tileset_Spritesheet_6
+  - first:
+      213: 21300014
+    second: Jungle_Tileset_Spritesheet_7
+  - first:
+      213: 21300016
+    second: Jungle_Tileset_Spritesheet_8
+  - first:
+      213: 21300018
+    second: Jungle_Tileset_Spritesheet_9
+  - first:
+      213: 21300020
+    second: Jungle_Tileset_Spritesheet_10
+  - first:
+      213: 21300022
+    second: Jungle_Tileset_Spritesheet_11
+  - first:
+      213: 21300024
+    second: Jungle_Tileset_Spritesheet_12
+  - first:
+      213: 21300026
+    second: Jungle_Tileset_Spritesheet_13
+  - first:
+      213: 21300028
+    second: Jungle_Tileset_Spritesheet_14
+  - first:
+      213: 21300030
+    second: Jungle_Tileset_Spritesheet_15
+  - first:
+      213: 21300032
+    second: Jungle_Tileset_Spritesheet_16
+  - first:
+      213: 21300034
+    second: Jungle_Tileset_Spritesheet_17
+  - first:
+      213: 21300036
+    second: Jungle_Tileset_Spritesheet_18
+  - first:
+      213: 21300038
+    second: Jungle_Tileset_Spritesheet_19
+  - first:
+      213: 21300040
+    second: Jungle_Tileset_Spritesheet_20
+  - first:
+      213: 21300042
+    second: Jungle_Tileset_Spritesheet_21
+  - first:
+      213: 21300044
+    second: Jungle_Tileset_Spritesheet_22
+  - first:
+      213: 21300046
+    second: Jungle_Tileset_Spritesheet_23
+  - first:
+      213: 21300048
+    second: Jungle_Tileset_Spritesheet_24
+  - first:
+      213: 21300050
+    second: Jungle_Tileset_Spritesheet_25
+  - first:
+      213: 21300052
+    second: Jungle_Tileset_Spritesheet_26
+  - first:
+      213: 21300054
+    second: Jungle_Tileset_Spritesheet_27
+  - first:
+      213: 21300056
+    second: Jungle_Tileset_Spritesheet_28
+  - first:
+      213: 21300058
+    second: Jungle_Tileset_Spritesheet_29
+  - first:
+      213: 21300060
+    second: Jungle_Tileset_Spritesheet_30
+  - first:
+      213: 21300062
+    second: Jungle_Tileset_Spritesheet_31
+  - first:
+      213: 21300064
+    second: Jungle_Tileset_Spritesheet_32
+  - first:
+      213: 21300066
+    second: Jungle_Tileset_Spritesheet_33
+  - first:
+      213: 21300068
+    second: Jungle_Tileset_Spritesheet_34
+  - first:
+      213: 21300070
+    second: Jungle_Tileset_Spritesheet_35
+  - first:
+      213: 21300072
+    second: Jungle_Tileset_Spritesheet_36
+  - first:
+      213: 21300074
+    second: Jungle_Tileset_Spritesheet_37
+  - first:
+      213: 21300076
+    second: Jungle_Tileset_Spritesheet_38
+  - first:
+      213: 21300078
+    second: Jungle_Tileset_Spritesheet_39
+  - first:
+      213: 21300080
+    second: Jungle_Tileset_Spritesheet_40
+  - first:
+      213: 21300082
+    second: Jungle_Tileset_Spritesheet_41
+  - first:
+      213: 21300084
+    second: Jungle_Tileset_Spritesheet_42
+  - first:
+      213: 21300086
+    second: Jungle_Tileset_Spritesheet_43
+  - first:
+      213: 21300088
+    second: Jungle_Tileset_Spritesheet_44
+  - first:
+      213: 21300090
+    second: Jungle_Tileset_Spritesheet_45
+  - first:
+      213: 21300092
+    second: Jungle_Tileset_Spritesheet_46
+  - first:
+      213: 21300094
+    second: Jungle_Tileset_Spritesheet_47
+  - first:
+      213: 21300096
+    second: Jungle_Tileset_0
+  - first:
+      213: 21300098
+    second: Jungle_Tileset_1
+  - first:
+      213: 21300100
+    second: Jungle_Tileset_2
+  - first:
+      213: 21300102
+    second: Jungle_Tileset_3
+  - first:
+      213: 21300104
+    second: Jungle_Tileset_4
+  - first:
+      213: 21300106
+    second: Jungle_Tileset_5
+  - first:
+      213: 21300108
+    second: Jungle_Tileset_6
+  - first:
+      213: 21300110
+    second: Jungle_Tileset_7
+  - first:
+      213: 21300112
+    second: Jungle_Tileset_8
+  - first:
+      213: 21300114
+    second: Jungle_Tileset_9
+  - first:
+      213: 21300116
+    second: Jungle_Tileset_10
+  - first:
+      213: 21300118
+    second: Jungle_Tileset_11
+  - first:
+      213: 21300120
+    second: Jungle_Tileset_12
+  - first:
+      213: 21300122
+    second: Jungle_Tileset_13
+  - first:
+      213: 21300124
+    second: Jungle_Tileset_14
+  - first:
+      213: 21300126
+    second: Jungle_Tileset_15
+  - first:
+      213: 21300128
+    second: Jungle_Tileset_16
+  - first:
+      213: 21300130
+    second: Jungle_Tileset_17
+  - first:
+      213: 21300132
+    second: Jungle_Tileset_18
+  - first:
+      213: 21300134
+    second: Jungle_Tileset_19
+  - first:
+      213: 21300136
+    second: Jungle_Tileset_20
+  - first:
+      213: 21300138
+    second: Jungle_Tileset_21
+  - first:
+      213: 21300140
+    second: Jungle_Tileset_22
+  - first:
+      213: 21300142
+    second: Jungle_Tileset_23
+  - first:
+      213: 21300144
+    second: Jungle_Tileset_24
+  - first:
+      213: 21300146
+    second: Jungle_Tileset_25
+  - first:
+      213: 21300148
+    second: Jungle_Tileset_26
+  - first:
+      213: 21300150
+    second: Jungle_Tileset_27
+  - first:
+      213: 21300152
+    second: Jungle_Tileset_28
+  - first:
+      213: 21300154
+    second: Jungle_Tileset_29
+  - first:
+      213: 21300156
+    second: Jungle_Tileset_30
+  - first:
+      213: 21300158
+    second: Jungle_Tileset_31
+  - first:
+      213: 21300160
+    second: Jungle_Tileset_32
+  - first:
+      213: 21300162
+    second: Jungle_Tileset_33
+  - first:
+      213: 21300164
+    second: Jungle_Tileset_34
+  - first:
+      213: 21300166
+    second: Jungle_Tileset_35
+  - first:
+      213: 21300168
+    second: Jungle_Tileset_36
+  - first:
+      213: 21300170
+    second: Jungle_Tileset_37
+  - first:
+      213: 21300172
+    second: Jungle_Tileset_38
+  - first:
+      213: 21300174
+    second: Jungle_Tileset_39
+  - first:
+      213: 21300176
+    second: Jungle_Tileset_40
+  - first:
+      213: 21300178
+    second: Jungle_Tileset_41
+  - first:
+      213: 21300180
+    second: Jungle_Tileset_42
+  - first:
+      213: 21300182
+    second: Jungle_Tileset_43
+  - first:
+      213: 21300184
+    second: Jungle_Tileset_44
+  - first:
+      213: 21300186
+    second: Jungle_Tileset_45
+  - first:
+      213: 21300188
+    second: Jungle_Tileset_46
+  - first:
+      213: 21300190
+    second: Jungle_Tileset_47
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jungle_Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960b63b9f4f496f47b8be0263f4efb24
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb7636435e8b3d4bad066f9a8f50c2a
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c9053ab324fc642bcf3710115e0377
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58b590a66c5d1745beaf2c9446f6b4a
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa5666d19773894d9499ed54df3e56a
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefa736e498a91e4fb10b31b33e16d5d
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f2e93b8e64c4d40a412e35b28c67bf
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2481315e9e95e9468d2fa42d541b55b
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b156c28f625bb534b87182ff088a31c5
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f640f1d02900442a1c2ca113f84557
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f80f896eefc8144975056adcda6c85
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d9402537ee88d478c398c2c3a17a1d
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bd05a3372b8564a9a3831dcd2b391e
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d163098c8de2b3b409f8ff4935b9aa2b
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911c19b953a802e43919a3571c1f1be3
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42488c51f2fb23d439643328e06d7e4a
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9573ea2b72e7d4aa97392e19108d98
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0cfa59cd5bb4048b51a32475859afb
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1240d03839bbb7546ac15e2afaaee6e3
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060c4c902951a1d499cadf22a1ebf91d
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5d1a9860edd63468a6fa9f963bad75
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211cf0bbdd939864ab5ba5660b59b9db
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7580966dd7570479c7ec2cfddca0b7
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c4a39d746e8ce43b09d817f4c18f1b
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123ce1131b5f53646a4d917745bc6e44
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae31bcb8aa2aac54386161930ecdcfcc
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb6b76c6e86a734d92071aedea467eb
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffd2bf3ef6ccce478a08c3688b2fae4
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8976619ae5cc24bbb91dce9b903afc
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ac8a8d91e78904b81e3087b0aa2237
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971c4be724fa92e40b5fa7e7b0219222
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle_Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283a17f127da4244e93610a2935fe3b8
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d38dc9c9923704e489ff7269df491ff0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
