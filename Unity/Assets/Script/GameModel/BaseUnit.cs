@@ -10,6 +10,9 @@ public abstract class BaseUnit : MonoBehaviour {
     private Dictionary<Constants.UnitStat, float> _unitStat;    // 유닛 스텟
     private char[] _customMemory;   // 커맨드 입력에 따른 저장값이 필요할 때 해당 공간을 사용
 
+    public Sprite _Sprite = null;
+    public Rigidbody2D _RigidBody = null;
+    protected float moveSpeed = 1f;
     // 유닛 데이터 초기화
     public void Initialize(ResourceUnit resUnit) {
         states = new List<Constants.UnitState>();
