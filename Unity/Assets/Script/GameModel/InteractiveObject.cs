@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : InteractiveObject
+public class InteractiveObject : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
