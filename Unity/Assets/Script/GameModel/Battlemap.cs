@@ -7,14 +7,24 @@ public class Battlemap : MonoSingleton<Battlemap>
 {
     public Tilemap _TileMap;
 
-    public void TileUp(Vector2 worldPos) {
+    Dictionary<Color, Vector3Int> _colorTiles = new Dictionary<Color, Vector3Int>();
+    public void TileUpColor(Vector2 worldPos, Color color) {
 
         int x = _TileMap.WorldToCell(worldPos).x;
         int y = _TileMap.WorldToCell(worldPos).y;
 
         Vector3Int tileVector = new Vector3Int(x, y, 0);
         _TileMap.SetTileFlags(tileVector, TileFlags.None);
-        _TileMap.SetColor(tileVector, Color.red);
+
+        if (_colorTiles.ContainsKey(color)) {
+            if (_colorTiles[color] != tileVector) {
+                _TileMap.SetColor(_colorTiles[color], Color.white);
+                _colorTiles[color] = tileVector;
+            }
+        } else {
+            _colorTiles.Add(color, tileVector);
+        }
+        _TileMap.SetColor(tileVector, color);
         
     }
 
