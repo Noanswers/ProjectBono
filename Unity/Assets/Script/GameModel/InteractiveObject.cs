@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public SpriteRenderer _MainSprite;
+    public BoxCollider2D _Collider;
+
+
+    private void Awake() {
+        if (_MainSprite == null)
+            _MainSprite = GetComponent<SpriteRenderer>();
+        if (_Collider == null)
+            _Collider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void InteractOn(PlayerUnit unit) {
+        _MainSprite.color = unit.Color;
+
+    }
+
+    public void InteractOff() {
+        _MainSprite.color = Color.white;
     }
 }
