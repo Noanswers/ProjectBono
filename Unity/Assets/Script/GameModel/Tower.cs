@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tower : InteractiveObject
 {
+    TowerModel towerModel = null;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -13,10 +13,20 @@ public class PlayerUnit : BaseUnit {
         }
     }
 
+    PlayerModel playerModel = null;
+
     Vector2 movement;
 
     InteractiveObject interactiveObject = null;
 
+    bool isMyPlayer = false;
+    public bool IsMyPlayer {
+        get {
+            return isMyPlayer;
+        }
+    }
+
+    //InputManager로 옮기자
     private void Update() {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
