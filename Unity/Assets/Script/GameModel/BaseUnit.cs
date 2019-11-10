@@ -13,6 +13,7 @@ public abstract class BaseUnit : MonoBehaviour {
     public Sprite _Sprite = null;
     public Rigidbody2D _RigidBody = null;
     protected float moveSpeed = 1f;
+    protected float sprintSpeed = 1.5f;
     // 유닛 데이터 초기화
     public void Initialize(ResourceUnit resUnit) {
         states = new List<Constants.UnitState>();

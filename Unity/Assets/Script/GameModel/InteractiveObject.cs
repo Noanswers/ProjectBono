@@ -15,6 +15,10 @@ public class InteractiveObject : MonoBehaviour
             _Collider = GetComponent<BoxCollider2D>();
     }
 
+    public void Interact(PlayerUnit unit) {
+    
+    }
+
     public void InteractOn(PlayerUnit unit) {
         _MainSprite.color = unit.Color;
 

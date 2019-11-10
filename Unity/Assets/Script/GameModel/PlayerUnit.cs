@@ -17,7 +17,7 @@ public class PlayerUnit : BaseUnit {
 
     Vector2 movement;
 
-    InteractiveObject interactiveObject = null;
+    InteractiveObject enableInteractiveObject = null;
 
     bool isMyPlayer = false;
     public bool IsMyPlayer {
@@ -30,7 +30,7 @@ public class PlayerUnit : BaseUnit {
     private void Update() {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        Move(h, v);
+        Move(h, v, moveSpeed);
         Battlemap.Instance.TileUpColor(transform.position, Color.red);
 
         CheckInteractive();
@@ -38,9 +38,13 @@ public class PlayerUnit : BaseUnit {
         if (Input.GetKeyDown(KeyCode.Space)) {
             Interact();
         }
+
+        if (IsSprint()) {
+            Sprint(h, v);
+        }
     }
 
-    void Move(float h, float v) {
+    void Move(float h, float v, float speed) {
 
         movement = new Vector2(h, v);
         movement = movement.normalized * moveSpeed * Time.deltaTime;
@@ -48,9 +52,24 @@ public class PlayerUnit : BaseUnit {
         _RigidBody.MovePosition((Vector2)transform.position + movement);
     }
 
+
+    //조작 더블클릭?
+    bool IsSprint() {
+        if (Input.GetKeyDown(KeyCode.LeftControl)) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+    void Sprint(float h, float v) {
+        Move(h, v, sprintSpeed);
+    }
+
     void CheckInteractive() {
-        if (interactiveObject != null) {
-            float distance = Vector2.Distance(interactiveObject.transform.position, transform.position);
+        if (enableInteractiveObject != null) {
+            float distance = Vector2.Distance(enableInteractiveObject.transform.position, transform.position);
 
             if (_Collider.size.x < distance) {
                 ResetInteractive();
@@ -65,22 +84,22 @@ public class PlayerUnit : BaseUnit {
 
             ResetInteractive();
 
-            interactiveObject = colObj;
-            interactiveObject.InteractOn(this);
+            enableInteractiveObject = colObj;
+            enableInteractiveObject.InteractOn(this);
         }
     }
 
     void ResetInteractive() {
-        if (interactiveObject != null) {
-            interactiveObject.InteractOff();
-            interactiveObject = null;
+        if (enableInteractiveObject != null) {
+            enableInteractiveObject.InteractOff();
+            enableInteractiveObject = null;
         }
     }
 
 
     void Interact() {
-        if (interactiveObject) {
-        
+        if (enableInteractiveObject) {
+            enableInteractiveObject.Interact(this);
         }
     }
 
